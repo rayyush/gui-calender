@@ -3,7 +3,15 @@ import calendar
 
 def Calender_See():
     window = Tk()
-    
+    window.config(background="light grey")
+    window.title("Complete year calendar")
+    window.geometry("580x620")
+    get_year = int(year_entry.get())
+    window_content = calendar.calendar(get_year)
+    year_cal = Label(window, text=window_content, font=("Arial", 12, "bold"))
+    year_cal.grid(row = 5, column = 1)
+    window.mainloop()
+
 
 if __name__ == '__main__':
     root = Tk() 
